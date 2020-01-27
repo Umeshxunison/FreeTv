@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration"
+    android:scrollbars="vertical"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="#DCDCDC">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/relative_layout"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_marginLeft="80dp"
+                android:id="@+id/imgview_logo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@+id/relative_layout"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="6dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        android:textSize="30dp"
+                        android:id="@+id/txt_signup"
+                        android:textColor="#2278d4"
+                        android:textAlignment="center"/>
+
+                    <EditText
+                        android:id="@+id/edtname"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_signup"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:hint="Enter Name"
+                        android:textColor="#2278d4"
+                        android:drawablePadding="10dp"
+                        android:ems="12"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edtemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/edtname"
+                        android:hint=" Enter Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#2278d4"
+                        android:drawableLeft="@drawable/ic_email_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:ems="12"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <EditText
+                        android:id="@+id/edtpassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/edtemail"
+                        android:hint="Enter Password"
+                        android:inputType="textPassword"
+                        android:textColor="#2278d4"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:ems="12"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <EditText
+                        android:id="@+id/edtcontact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/edtpassword"
+                        android:hint="Enter Contact"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="#2278d4"
+                        android:drawableLeft="@drawable/ic_phone_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:ems="12"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <Button
+                        android:id="@+id/btnregister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/edtcontact"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:hint="Sign Up"
+                        android:textColor="#FFFFFF"
+                        android:background="#2278d4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Already Have an Account?"
+                        app:layout_constraintLeft_toRightOf="parent"
+                        app:layout_constraintRight_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnregister"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/txt_create_account"
+                        android:textColor="#000000" />
+
+                    <Button
+                        android:id="@+id/btnlogin"
+                        android:layout_width="49dp"
+                        android:layout_height="19dp"
+                        android:layout_below="@+id/btnregister"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_create_account"
+                        android:layout_gravity="center"
+                        app:layout_constraintLeft_toRightOf="parent"
+                        app:layout_constraintRight_toLeftOf="parent"
+                        android:background="#FFFFFF"
+                        android:text="Login"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#2278d4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#DCDCDC" >
+
+   <FrameLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:background="#DCDCDC">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/linearlayout_pageviewr">
+
+         <androidx.viewpager.widget.ViewPager
+             android:id="@+id/img_viewpager"
+             android:layout_width="wrap_content"
+             android:layout_height="250dp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="right">
+         <TextView
+             android:layout_width="100dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="260dp"
+             android:gravity="center"
+             android:text="Channel List"
+             android:background="@drawable/shape_right"
+             android:textColor="#FFFFFF" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/listnewchannels"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:clickable="true"
+             android:layout_marginTop="280dp"
+             />
+
+      </LinearLayout>
+
+   </FrameLayout>
+
+</ScrollView>
